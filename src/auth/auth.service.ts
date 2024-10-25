@@ -6,7 +6,7 @@ import {
 import * as bcrypt from 'bcrypt';
 import { UsersService } from '../users/users.service';
 import { JwtService } from '@nestjs/jwt';
-import { createUserDto } from 'src/users/dto/createUserDto';
+import { CreateUserDto } from 'src/users/dto/createUserDto';
 import { User } from 'src/users/user.entity';
 import { RoleValue } from 'src/roles/role.enum';
 import { RolesService } from 'src/roles/roles.services';
@@ -21,13 +21,10 @@ export class AuthService {
     private jwtService: JwtService,
   ) {}
 
-  async signIn(
-    username: string,
-    pass: string,
-  ): Promise<{ access_token: string }> {
-    const user = await this.usersService.findOneByEmail(username);
+  async signIn(email: string, pass: string): Promise<{ access_token: string }> {
+    const user = await this.usersService.findOneByEmail(email);
     if (!user || !(await bcrypt.compare(pass, user.password))) {
-      throw new UnauthorizedException();
+      throw new UnauthorizedException('incorrect password');
     }
 
     return {
@@ -40,7 +37,7 @@ export class AuthService {
   }
 
   async register(
-    payload: createUserDto,
+    payload: CreateUserDto,
   ): Promise<{ access_token: string; user: User }> {
     const result = await this.usersService.findOneByEmail(payload.email);
 
