@@ -60,7 +60,7 @@ export class AuthService {
       access_token: await this.jwtService.signAsync({
         id: newUser.id,
         username: newUser.username,
-        roles: newUser.roles,
+        roles: newUser.roles.map((role) => role.name),
       }),
     };
   }

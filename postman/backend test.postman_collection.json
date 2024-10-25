@@ -1,0 +1,290 @@
+{
+	"info": {
+		"_postman_id": "6a3c1a93-8dc8-465a-95cf-46144fc740a7",
+		"name": "backend test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12965061"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "/login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"token\", jsonData.access_token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"federicopalmie@hotmail.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_path}}/auth/login",
+							"host": [
+								"{{base_path}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"token\", jsonData.access_token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"new user\",\r\n    \"email\": \"example@example.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_path}}/auth/register",
+							"host": [
+								"{{base_path}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "films",
+			"item": [
+				{
+					"name": "/films",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMTY2NDU4LCJleHAiOjE2MzMyNTI4NTh9.8Kl4pYJORQ3vuyyGcpNHYqXJB_SZCV5xrOhn9IxUeqs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Star Wars: Episode VII - The Force Awakens\",\r\n  \"episode_id\": 7,\r\n  \"opening_crawl\": \"Luke Skywalker has vanished. In his absence, the sinister First Order has risen from the ashes of the Empire...\",\r\n  \"director\": \"J.J. Abrams\",\r\n  \"producer\": \"Kathleen Kennedy, J.J. Abrams, Bryan Burk\",\r\n  \"release_date\": \"2015-12-18\",\r\n  \"created\": \"2015-04-17T06:54:27.000Z\",\r\n  \"edited\": \"2015-04-17T06:54:27.000Z\"\r\n}"
+						},
+						"url": {
+							"raw": "{{base_path}}/movies",
+							"host": [
+								"{{base_path}}"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/import",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMTY2NDU4LCJleHAiOjE2MzMyNTI4NTh9.8Kl4pYJORQ3vuyyGcpNHYqXJB_SZCV5xrOhn9IxUeqs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_path}}/import",
+							"host": [
+								"{{base_path}}"
+							],
+							"path": [
+								"import"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/films",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMTY2NDU4LCJleHAiOjE2MzMyNTI4NTh9.8Kl4pYJORQ3vuyyGcpNHYqXJB_SZCV5xrOhn9IxUeqs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Ruta}}/movies",
+							"host": [
+								"{{Ruta}}"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/films/:id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMTY2NDU4LCJleHAiOjE2MzMyNTI4NTh9.8Kl4pYJORQ3vuyyGcpNHYqXJB_SZCV5xrOhn9IxUeqs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Ruta}}/movies/:id",
+							"host": [
+								"{{Ruta}}"
+							],
+							"path": [
+								"movies",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "99"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/films/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMTY2NDU4LCJleHAiOjE2MzMyNTI4NTh9.8Kl4pYJORQ3vuyyGcpNHYqXJB_SZCV5xrOhn9IxUeqs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Ruta}}/movies/:id",
+							"host": [
+								"{{Ruta}}"
+							],
+							"path": [
+								"movies",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/films/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMzMTY2NDU4LCJleHAiOjE2MzMyNTI4NTh9.8Kl4pYJORQ3vuyyGcpNHYqXJB_SZCV5xrOhn9IxUeqs",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Revenge of the Sith\"\r\n}"
+						},
+						"url": {
+							"raw": "{{base_path}}/films/6",
+							"host": [
+								"{{base_path}}"
+							],
+							"path": [
+								"films",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
