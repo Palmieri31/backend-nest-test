@@ -32,6 +32,36 @@
 $ npm install
 ```
 
+## Migrations
+
+```bash
+# run migrations
+npm run migration:run
+
+```
+
+## Database(Add manually due to the lack of seeds)
+
+### Admin User
+
+- \*\* id: 1,
+- \*\* username: admin,
+- \*\* email: admin@example.com,
+- \*\* password: '$2a$10$jlMbDzqnySUFp3sW1AxJ0ON0g96u4q6Z1dQbLUR3LD9aKrgVpyWlW
+
+### roles
+
+- \*\* id: 1
+- \*\* name: user,
+
+- \*\* id: 2
+- \*\* name: admin,
+
+### user_roles_user
+
+- \*\* userId: 1
+- \*\* roleId: 2,
+
 ## Compile and run the project
 
 ```bash
@@ -53,14 +83,6 @@ $ npm run test
 
 # test coverage
 $ npm run test:cov
-```
-
-## Migrations
-
-```bash
-# run migrations
-npm run migration:run
-
 ```
 
 ## Deployment
