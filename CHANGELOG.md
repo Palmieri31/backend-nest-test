@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/Palmieri31/backend-nest-test/compare/v0.0.6...v0.0.7) (2024-10-25)
+
+
+### Bug Fixes
+
+* vercel file ([b17aef3](https://github.com/Palmieri31/backend-nest-test/commit/b17aef3da17e6f0d72849f34017ba09eed838221))
+
 ### [0.0.6](https://github.com/Palmieri31/backend-nest-test/compare/v0.0.5...v0.0.6) (2024-10-25)
 
 
