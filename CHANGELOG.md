@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.11](https://github.com/Palmieri31/backend-nest-test/compare/v0.0.10...v0.0.11) (2024-10-25)
+
+
+### Bug Fixes
+
+* modify readme ([1c34ec3](https://github.com/Palmieri31/backend-nest-test/commit/1c34ec3bd25630e448ba1586bb2a549bd8dc528c))
+
 ### [0.0.10](https://github.com/Palmieri31/backend-nest-test/compare/v0.0.9...v0.0.10) (2024-10-25)
 
 ### [0.0.9](https://github.com/Palmieri31/backend-nest-test/compare/v0.0.8...v0.0.9) (2024-10-25)
