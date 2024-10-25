@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/Palmieri31/backend-nest-test/compare/v0.0.8...v0.0.9) (2024-10-25)
+
+
+### Bug Fixes
+
+* auth.services ([775bfb0](https://github.com/Palmieri31/backend-nest-test/commit/775bfb0f83f17b728d26c5a3ccba295ac32490ec))
+
 ### [0.0.8](https://github.com/Palmieri31/backend-nest-test/compare/v0.0.7...v0.0.8) (2024-10-25)
 
 
