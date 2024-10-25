@@ -44,23 +44,23 @@ npm run migration:run
 
 ### Admin User
 
-- \*\* id: 1,
-- \*\* username: admin,
-- \*\* email: admin@example.com,
-- \*\* password: '$2a$10$jlMbDzqnySUFp3sW1AxJ0ON0g96u4q6Z1dQbLUR3LD9aKrgVpyWlW
+- id: 1,
+- username: admin,
+- email: admin@example.com,
+- password: '$2a$10$jlMbDzqnySUFp3sW1AxJ0ON0g96u4q6Z1dQbLUR3LD9aKrgVpyWlW
 
 ### roles
 
-- \*\* id: 1
-- \*\* name: user,
+- id: 1
+- name: user,
 
-- \*\* id: 2
-- \*\* name: admin,
+- id: 2
+- name: admin,
 
 ### user_roles_user
 
-- \*\* userId: 1
-- \*\* roleId: 2,
+- userId: 1
+- roleId: 2,
 
 ## Compile and run the project
 
@@ -74,6 +74,10 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+
+## Swagger(local)
+
+[Swagger UI](http://localhost:3000/api)
 
 ## Run tests
 
