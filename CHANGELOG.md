@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.13](https://github.com/Palmieri31/backend-nest-test/compare/v0.0.12...v0.0.13) (2025-03-05)
+
+
+### Features
+
+* add docker ([393035d](https://github.com/Palmieri31/backend-nest-test/commit/393035def9f13a68b4e13ff4a2bdcd999b77e3a1))
+
+
+### Bug Fixes
+
+* use partial type in UpdateFilmDto ([b78abe2](https://github.com/Palmieri31/backend-nest-test/commit/b78abe2a67d4cc9ad8a70d1f2ff1a05870880020))
+
 ### [0.0.12](https://github.com/Palmieri31/backend-nest-test/compare/v0.0.11...v0.0.12) (2024-10-25)
 
 
